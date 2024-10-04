@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Tracker Web App</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Expense Tracker</h1>
+
+      <!-- Form to Add Expense -->
+      <form id="expense-form">
+        <div class="form-control">
+          <label for="expense-name">Expense Name</label>
+          <input type="text" id="expense-name" required />
+        </div>
+        <div class="form-control">
+          <label for="expense-amount">Amount</label>
+          <input type="number" id="expense-amount" required />
+        </div>
+        <div class="form-control">
+          <label for="expense-date">Date</label>
+          <input type="date" id="expense-date" required />
+        </div>
+        <div class="form-control">
+          <label for="expense-category">Category</label>
+          <select id="expense-category" required>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+          </select>
+        </div>
+        <button type="submit">Add Expense</button>
+      </form>
+
+      <!-- Section to Display Expenses -->
+      <div class="expenses-container">
+        <h2>Expenses</h2>
+        <ul id="expense-list"></ul>
+      </div>
+
+      <!-- Section to Display Total Amount -->
+      <div class="total-expense">
+        <h2>Total: <span id="total-amount">0</span> MYR</h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

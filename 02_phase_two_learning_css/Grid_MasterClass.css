@@ -1,0 +1,153 @@
+/* Masterclass on CSS Grid Box Model
+Introduction to CSS Grid
+CSS Grid is a powerful two-dimensional layout system that allows you to arrange content in rows and columns. It's perfect for creating responsive layouts, providing a more flexible and efficient way to design web pages compared to older methods like floats or flexbox.
+
+Grid Fundamentals
+Before diving deep, here are the essential concepts:
+
+Grid Container: The element that has display: grid; applied to it.
+Grid Items: The direct children of the grid container.
+Grid Lines: Horizontal and vertical lines that divide the grid into sections.
+Grid Cells: The spaces between two adjacent grid lines.
+Grid Tracks: A collection of grid cells that form rows or columns.
+Grid Areas: A rectangular space of grid cells defined by four grid lines (top, right, bottom, left).
+Step-by-Step Guide to Mastering CSS Grid */
+
+/* 1. Basic Setup: Defining a Grid Container
+To create a grid layout, you start by turning an element into a grid container. */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  grid-template-rows: auto;
+  gap: 10px; /* Space between grid items */
+}
+
+/* grid-template-columns: Defines the number of columns and their sizes. 
+The value 1fr means one fractional unit, taking up equal space.
+grid-template-rows: Sets the height of rows.
+gap: Adds spacing between the grid items. */
+
+/* 2. Grid Columns and Rows */
+/* Fixed vs Flexible Sizes: You can mix fixed sizes with flexible units. */
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr; /* First column is fixed 200px, others flexible */
+  grid-template-rows: 100px auto; /* First row 100px, second row adjusts to content */
+}
+/* Here, the first column has a fixed width of 200px, while the remaining columns share the remaining space equally. */
+
+/* 3. Positioning Grid Items: grid-column and grid-row */
+/* Grid items can span across multiple rows and columns. */
+.item1 {
+  grid-column: 1 / 3; /* Span from column line 1 to 3 */
+  grid-row: 1 / 2; /* Span from row line 1 to 2 */
+}
+/* This makes item1 span two columns while staying in the first row. */
+
+/* 4. Repeat Notation and Fractional Units (fr) */
+/* Using repeat() helps reduce redundancy, and fr makes layouts more fluid. */
+.container {
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(2, 200px); /* 2 rows, each 200px */
+}
+/* This defines 4 columns of equal width and 2 rows, each 200px in height. */
+
+/* 5. Implicit and Explicit Grid
+CSS Grid can create implicit rows and columns when content overflows.
+
+Explicit Grid: You define rows/columns in grid-template-columns and grid-template-rows.
+Implicit Grid: Extra rows/columns are created automatically as needed. */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 150px; /* Implicitly define rows with 150px height if not defined */
+}
+
+/* 6. Grid Template Areas */
+/* Named grid areas allow you to assign sections of your grid by name instead of grid line numbers. */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+/* This gives you a clean, visual way to define layouts. You just apply the corresponding grid-area to the elements. */
+
+/* 7. Aligning Grid Items
+justify-items: Aligns grid items horizontally within their grid area.
+align-items: Aligns grid items vertically.
+place-items: Shorthand for aligning items both horizontally and vertically. */
+.container {
+  justify-items: center; /* Center horizontally */
+  align-items: start; /* Align to top */
+}
+/* For individual items, you can use justify-self and align-self to control their alignment independently. */
+
+/* 8. Responsive Design with CSS Grid */
+/* CSS Grid shines in creating responsive layouts without media queries. */
+.container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Auto-fit items into available space */
+  gap: 10px;
+}
+/* Here, grid items will automatically wrap, each having a minimum width of 200px, but will grow to fill available space. */
+
+/* Common Use Cases for Practice */
+/* Grid Layout for a Basic Web Page */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+  gap: 10px;
+}
+
+.header {
+  grid-area: header;
+}
+.nav {
+  grid-area: nav;
+}
+.content {
+  grid-area: content;
+}
+.footer {
+  grid-area: footer;
+}
+/* Responsive Image Gallery */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+/* This layout creates a responsive gallery where each image has a minimum width of 150px and automatically fills the available space.
+
+Key Concepts Recap
+Grid Template: Define your grid’s structure with grid-template-columns and grid-template-rows.
+Grid Positioning: Place items using grid-column and grid-row.
+Grid Areas: Name grid areas for clearer layouts.
+Aligning Items: Align grid items using justify-items, align-items, and place-items.
+Responsiveness: Use auto-fill and minmax() for responsive grids.
+Final Practice: Create a Full Page Layout
+Try building a full-page layout using a combination of all these concepts. Create a header, navigation bar, main content, and footer. Practice aligning elements and creating responsive behavior using grid-template-areas and auto-fill. */

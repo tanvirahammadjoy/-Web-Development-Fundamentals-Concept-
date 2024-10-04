@@ -1,0 +1,464 @@
+/* in style the most important thing is first font images and then other styles */
+
+/* this is an universal selector this changes will apply in full page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  background-color: red;
+}
+h2 {
+  background-color: rgb(216, 255, 62);
+}
+h3 {
+  background-color: rgb(0, 8, 255);
+}
+h4 {
+  background-color: rgb(47, 255, 0);
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+span {
+  display: block;
+}
+
+/* form */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  margin-left: -200px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  font-size: 1.1rem;
+}
+
+#selectBox {
+  width: 300px;
+  height: 30px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.form-p {
+  text-align: center;
+  margin-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  text-shadow: -50px -10px 5px rgb(255, 0, 0), 50px 10px 10px rgb(255, 0, 0);
+}
+
+br {
+  size: 10px;
+  font-size: 10px;
+}
+
+#colors {
+  padding: 0px 25px;
+  background-color: rgb(0, 132, 226);
+  color: rgb(255, 255, 255);
+}
+
+.list-ceal {
+  list-style: none;
+}
+
+#vagitable {
+  padding: 0 25px;
+}
+/* 
+#outer-box {
+  overflow: auto;
+} */
+
+#inner-outer-box {
+  width: 99%;
+  float: right;
+  padding: 10px;
+  border: 1px solid red;
+  margin: 10px 10px;
+}
+
+.innerone {
+  float: right;
+  text-align: center;
+  min-width: 200px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+#flex-box {
+  margin: 10px;
+  padding: 10px;
+  clear: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  flex-wrap: wrap;
+}
+
+.flex {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#grid-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 3fr;
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+}
+
+.gride {
+  /* width: 200px; */
+  height: 100px;
+  border: 1px solid red;
+  margin: 10px;
+  text-align: center;
+  padding-top: 40px;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+
+.full-main-page {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 10px;
+  padding: 10px;
+  border: 3px dotted rgb(128, 0, 255);
+}
+
+.grid-header {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.header-h1 {
+  text-align: center;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+}
+
+.grid-main1 {
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid rgb(255, 0, 0);
+  text-align: center;
+}
+
+.grid-main2 {
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid rgb(255, 0, 0);
+  text-align: center;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+  border: 2px solid red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tabel-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid red;
+}
+
+table {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 10px;
+  border-collapse: collapse;
+}
+
+tr {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+
+th {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+}
+
+td {
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.progress-bar {
+  border: 2px solid red;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.images {
+  border: 3px solid red;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttons {
+  border: 3px solid red;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn {
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  border-radius: 10px;
+  color: black;
+}
+
+.btn1 {
+  background-color: red;
+  border: 2px solid yellow;
+}
+.btn2 {
+  background-color: rgb(47, 0, 255);
+  border: 2px solid yellow;
+}
+.btn3 {
+  background-color: rgb(26, 255, 0);
+  border: 2px solid yellow;
+}
+
+.btn1:hover {
+  background-color: rgb(71, 54, 86);
+  transition: 700ms;
+  color: rgb(255, 255, 255);
+}
+.btn2:hover {
+  background-color: rgb(142, 142, 142);
+  transition: 700ms;
+  color: black;
+}
+.btn3:hover {
+  background-color: rgb(230, 203, 255);
+  transition: 700ms;
+  color: black;
+}
+
+.shapes {
+  border: 2px dashed rgb(128, 0, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.circal {
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.rectongoler {
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  background-color: red;
+}
+
+/* HTML: <div class="star"></div> */
+.star {
+  width: 300px;
+  aspect-ratio: 1;
+  background: #f8ca00;
+  clip-path: polygon(
+    50% 0,
+    calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+    calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+  );
+  /* or more simple */
+  /* clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%);  */
+}
+
+/* HTML: <div class="triangle"></div> */
+.triangle {
+  width: 300px;
+  height: 300px;
+  /* background: linear-gradient(45deg,#FA6900,#C02942); */
+  background-image: url("https://plus.unsplash.com/premium_photo-1679436183834-28afc4306631?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+  /* clip-path: polygon(50% 100%, 0% 0%, 100% 0%); */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-position: center;
+  background-size: cover;
+}
+
+/* HTML: <div class="circle-cut"></div> */
+.circle-cut {
+  --r: 50px; /* cut size */
+  height: 250px;
+  aspect-ratio: 1.2; /* equal to width */
+  border-radius: 20px;
+  background: #f07818;
+  mask: radial-gradient(var(--r) at var(--r), #00000000 calc(100% - 1px), #000)
+    calc(-1 * var(--r));
+}
+
+/* HTML: <div class="heart"></div> */
+.heart {
+  height: 250px; /* adjust to control the size */
+  aspect-ratio: 1;
+  --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+  -webkit-mask-box-image: var(--_m);
+  mask-border: var(--_m);
+  clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+  background: #cc333f;
+}
+/* fallback until better support for mask-border */
+@supports not (-webkit-mask-box-image: var(--_m)) {
+  .heart {
+    mask: radial-gradient(at 70% 31%, #000 29%, #0000 30%),
+      radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+      linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+  }
+}
+
+/* HTML: <div class="pin"></div> */
+.pin {
+  height: 250px; /* control the size */
+  aspect-ratio: 2/3; /* control the width */
+  mask: conic-gradient(
+        from -30deg at bottom,
+        #0000,
+        #000 1deg 59deg,
+        #0000 60deg
+      )
+      bottom/100% 50% no-repeat,
+    radial-gradient(
+      circle at 50% calc(100% / 3),
+      #0000 21.5%,
+      #000 22% 44%,
+      #0000 44.5%
+    );
+  background: #ec1a23;
+}
+
+.shapes-for-position {
+  display: flex;
+  border: 3px solid red;
+  margin: 10px;
+  padding: 20px;
+  position: relative;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circal-1 {
+  width: 300px;
+  height: 300px;
+  border: 2px solid red;
+  border-radius: 100%;
+  background-color: red;
+  position: relative;
+}
+
+.rectongoler-2 {
+  width: 300px;
+  position: absolute;
+  top: 50px;
+  aspect-ratio: 1;
+  background: #f8ca00;
+  clip-path: polygon(
+    50% 0,
+    calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+    calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+    calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+  );
+}
+
+.heart-3 {
+  height: 150px; /* adjust to control the size */
+  aspect-ratio: 0.8;
+  --_m: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+  -webkit-mask-box-image: var(--_m);
+  mask-border: var(--_m);
+  clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+  background: #a80000;
+  position: absolute;
+  top: 150px;
+}
+/* fallback until better support for mask-border */
+@supports not (-webkit-mask-box-image: var(--_m)) {
+  .heart {
+    mask: radial-gradient(at 70% 31%, #000 29%, #0000 30%),
+      radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+      linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+  }
+}

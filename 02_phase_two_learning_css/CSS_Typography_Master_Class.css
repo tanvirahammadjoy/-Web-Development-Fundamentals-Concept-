@@ -1,0 +1,236 @@
+/* Master Class on Typography in CSS: A Complete Guide
+Typography is one of the most crucial aspects of web design and development. It enhances readability, ensures a cohesive look, and gives your site personality. In CSS, you have a wide variety of tools at your disposal to manipulate text and control its appearance.
+
+1. Font Families
+Fonts give character to your text. CSS provides the font-family property to define the typeface.
+
+Syntax: */
+/* font-family: 'Font Name', fallback, sans-serif; */
+
+/* Best Practice: Always include fallback fonts in case the primary font fails to load.
+Example: */
+
+h1 {
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+/* 2. Font Weight
+Defines the boldness or thickness of a font.
+
+Syntax: */
+/* font-weight: normal | bold | 100-900; */
+
+/* Example: */
+
+p {
+  font-weight: 700; /* Bold text */
+}
+
+/* 3. Font Size
+Controls the size of the text.
+
+Syntax:
+ */
+/* font-size: 16px; // pixels */
+/* font-size: 1.2em; // relative to parent */
+/* font-size: 100%; // relative to the default size */
+
+/* Common Units:
+
+px: Absolute sizing.
+em/rem: Relative sizing to parent or root element.
+%: Relative to the parent container's font size. */
+
+/* Responsive Fonts: */
+body {
+  font-size: calc(1em + 2vw);
+}
+
+/* 4. Line Height
+Adjusts the vertical spacing between lines of text (leading).
+
+Syntax: */
+/* line-height: 1.5; /* Multiplicative value */
+/* line-height: 24px; /* Fixed height */
+
+/* Tip: Using unitless values like 1.5 ensures better scalability across devices. */
+
+/* 5. Text Alignment
+Controls the horizontal alignment of text within its container.
+
+Syntax: */
+/* text-align: left | center | right | justify; */
+
+/* Example */
+h1 {
+  text-align: center;
+}
+
+/* 6. Text Decoration
+Used to add underlines, overlines, and line-through effects.
+Syntax: */
+/* text-decoration: underline | line-through | none;
+text-decoration-color: red;
+text-decoration-style: wavy | dashed | solid;
+ */
+
+/* Example */
+a {
+  text-decoration: underline wavy blue;
+}
+
+/* 7. Letter Spacing (Tracking)
+Adjusts the space between individual letters.
+
+Syntax: */
+/* letter-spacing: 0.1em; or px */
+
+/* Example */
+h1 {
+  letter-spacing: 4px;
+}
+
+/* 8. Word Spacing
+Modifies the space between words.
+
+Syntax: */
+/* word-spacing: 0.3em; */
+
+/* Example */
+p {
+  word-spacing: 5px;
+}
+
+/* 9. Text Transform
+Alters the casing of text (uppercase, lowercase, capitalization).
+
+Syntax: */
+/* text-transform: uppercase | lowercase | capitalize; */
+
+/* Example */
+h2 {
+  text-transform: capitalize;
+}
+
+/* 10. Font Variant
+Allows small-caps, numerals, and other stylistic options.
+Syntax:
+ */
+
+/* font-variant: small-caps | normal;
+font-variant-numeric: oldstyle-nums; */
+
+/* Example: */
+h3 {
+  font-variant: small-caps;
+}
+
+/* 11. Text Shadow
+Adds shadow to text.
+
+Syntax:
+ */
+/* text-shadow: h-shadow v-shadow blur-radius color; */
+
+/* Example: */
+h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 12. Font Stretch
+Adjusts the width of the font face.
+
+Syntax */
+/* font-stretch: expanded | condensed | ultra-expanded; */
+
+/* 13. Overflow & Text Overflow
+Controls what happens when text overflows its containing element.
+Syntax: */
+/* overflow: hidden | scroll | auto;
+text-overflow: ellipsis | clip;
+ */
+
+/* Example: */
+.text-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 14. White Space Control
+Manages how white space inside an element is handled.
+
+Syntax: */
+/* white-space: normal | nowrap | pre | pre-wrap | pre-line; */
+
+/* example: */
+.poetry {
+  white-space: pre-wrap;
+}
+
+/* 15. Vertical Alignment
+Adjusts vertical positioning of inline elements relative to their container.
+
+Syntax: */
+/* vertical-align: baseline | sub | super | top | text-top | middle | bottom | text-bottom; */
+
+/* 16. Custom Fonts with @font-face
+Load and use custom fonts via the @font-face rule.
+
+Syntax: */
+@font-face {
+  font-family: "CustomFont";
+  src: url("customfont.woff2") format("woff2");
+}
+
+/* Usage: */
+body {
+  font-family: "CustomFont", sans-serif;
+}
+
+/* 17. Font Feature Settings
+Fine-tunes font features (ligatures, alternate characters).
+
+Syntax: */
+/* font-feature-settings: 'liga' 1, 'smcp' 1; */
+
+/* 18. Responsive Typography
+Dynamic typography scaling based on viewport size.
+
+Viewport Units: */
+h1 {
+  font-size: 5vw; /* 5% of the viewport width */
+}
+
+/* Clamp Method: Ensure a responsive range for font sizes. */
+h1 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
+/* 19. CSS Variables for Typography
+CSS variables allow dynamic control of typography settings across your stylesheet.
+Example:
+ */
+:root {
+  --base-font-size: 16px;
+  --heading-font-weight: 700;
+}
+body {
+  font-size: var(--base-font-size);
+}
+h1 {
+  font-weight: var(--heading-font-weight);
+}
+
+/* 20. Typography Accessibility
+Font Readability: Use legible fonts and adequate font sizes (16px minimum for body text).
+Contrast: Ensure enough contrast between text and background.
+ */
+/* color: #000;
+background-color: #fff;
+ */
+
+/* Conclusion */
+/* Mastering typography in CSS will enhance both the functionality and aesthetic appeal of your web content.
+By leveraging the different properties, you can ensure optimal readability,
+accessibility, and a polished look for your websites. */

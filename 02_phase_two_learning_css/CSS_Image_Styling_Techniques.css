@@ -1,0 +1,190 @@
+/* CSS Master Class: Image Styling
+In this master class, we will explore the wide range of techniques you can use to style images using CSS. We'll cover everything from basic properties to more advanced image manipulations.
+
+1. Basic Image Properties
+1.1. width and height
+These properties define the dimensions of an image.
+
+Example: */
+img {
+  width: 100%;
+  height: auto;
+}
+/* This keeps the image responsive by making it fill its container's width while maintaining the aspect ratio. */
+
+/*
+1.2. object-fit
+object-fit controls how the image behaves within its container.
+
+Values:
+
+cover: Scales the image to cover the container without distorting the aspect ratio.
+contain: Scales the image to fit inside the container while preserving its aspect ratio.
+fill: Stretches the image to fill the container, possibly distorting it.
+Example:
+*/
+img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+/* 1.3. object-position
+Used with object-fit to control the alignment of the image within its container.
+
+Example: */
+img {
+  object-fit: cover;
+  object-position: top left;
+}
+/* This will align the image to the top-left corner of the container. */
+/* 
+2. Border and Box Styling
+2.1. border-radius
+This property rounds the corners of an image. It can also create circular images.
+
+Example: 
+*/
+img {
+  border-radius: 15px;
+}
+
+/* Circular Image: */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* 2.2. box-shadow
+Add shadows to images for a more dynamic look.
+
+Example: */
+img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 2.3. border
+Add a border around your images to make them stand out.
+
+Example: */
+img {
+  border: 5px solid #f1f1f1;
+  border-radius: 10px;
+}
+
+/* 3. Image Filters
+CSS filters are useful for adding effects like grayscale, blur, and brightness.
+
+3.1. filter: grayscale
+Convert images to grayscale for a desaturated effect.
+
+Example: */
+img {
+  filter: grayscale(100%);
+}
+
+/* 3.2. filter: blur
+Create a blur effect to soften images.
+
+Example: */
+img {
+  filter: blur(5px);
+}
+/* 
+3.3. filter: brightness
+Control the brightness of an image.
+
+Example:
+*/
+img {
+  filter: brightness(150%);
+}
+/* 3.4. Combining Filters
+You can combine multiple filters.
+
+Example: */
+img {
+  filter: grayscale(100%) blur(2px) brightness(80%);
+}
+/* 4. Advanced Techniques
+4.1. Image Hover Effects
+Changing the appearance of images when the user hovers over them.
+
+Example: */
+img {
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+/* This will slightly zoom the image when hovered. */
+
+/* 4.2. Responsive Image Grids
+Creating an image grid that adapts to the screen size using CSS Grid or Flexbox.
+
+Grid Example: */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+/* This will create a grid of images that adjusts based on the screen size. */
+
+/* 
+4.3. Image Overlays
+Adding a color overlay or text over an image using position and ::before/::after pseudo-elements.
+
+Example:
+*/
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  display: block;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover::before {
+  opacity: 1;
+}
+/* This adds a dark overlay when the user hovers over the image. */
+/* 5. Clip Path for Custom Shapes
+clip-path allows you to display images in different shapes.
+
+Example: */
+img {
+  clip-path: circle(50% at 50% 50%);
+}
+/* This will display the image in a circular shape. */
+
+/* 6. Image Masks
+mask-image is used to mask parts of the image for creative effects.
+
+Example: */
+img {
+  mask-image: radial-gradient(circle, transparent 20%, black 80%);
+}
+/* This creates a soft circular fade-out effect on the image. */
+/* Conclusion
+Styling images with CSS offers endless possibilities for creativity and functionality. By mastering properties like object-fit, filter, border-radius, and clip-path, you can significantly enhance the visual impact of your images. Combine these techniques to achieve more complex and engaging designs.
+
+Practice Exercise:
+Create an image gallery where each image changes shape, has a filter applied, and animates when hovered over. 
+*/

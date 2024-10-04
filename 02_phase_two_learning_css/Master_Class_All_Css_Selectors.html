@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Master Class All Selectors</title>
+    <style>
+      /* CSS Master Class: All Selectors
+    CSS selectors are the foundation of how styles are applied to HTML elements.
+    Mastering CSS selectors gives you fine control over your styling, allowing you to target elements in a multitude of ways.
+    Let’s dive deep into every CSS selector type!
+    */
+
+      /* 1. Basic Selectors */
+      /* 1.1. Universal Selector (*) */
+      /* Selects all elements on the page. */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 1.2. Type Selector (Element Selector) */
+      /* Selects elements by their tag name. */
+      p {
+        font-size: 16px;
+      }
+
+      /* 1.3. Class Selector (.classname) */
+      /* Selects elements by their class attribute. */
+      .button {
+        background-color: blue;
+        color: white;
+      }
+
+      /* 1.4. ID Selector (#idname) */
+      /* Selects a single element by its id. */
+      #header {
+        background-color: black;
+      }
+
+      /* 2. Combinators */
+      /* 2.1. Descendant Selector (Space) */
+      /* Selects elements that are descendants of another element. */
+      div p {
+        color: red;
+      }
+
+      /* 2.2. Child Selector (>) */
+      /* Selects direct children of an element. */
+      ul > li {
+        list-style-type: none;
+      }
+
+      /* 2.3. Adjacent Sibling Selector (+) */
+      /* Selects the first sibling immediately after another element. */
+      h1 + p {
+        font-size: 18px;
+      }
+
+      /* 2.4. General Sibling Selector (~) */
+      /* Selects all siblings after another element. */
+      h2 ~ p {
+        color: gray;
+      }
+
+      /* 3. Attribute Selectors */
+      /* 3.1. [attribute] */
+      /* Selects elements with a specified attribute. */
+      input[type="text"] {
+        border: 1px solid black;
+      }
+
+      /* 3.3. [attribute^="value"] */
+      /* Selects elements with a specific attribute and value. */
+      a[href="https://www.example.com"]
+      {
+        color: green;
+      }
+
+      /* 3.4. [attribute$="value"] */
+      /* Selects elements whose attribute value starts with a specific value. */
+      a[href$=".pdf"] {
+        color: red;
+      }
+
+      /* 3.5. [attribute="value"]* */
+      /* Selects elements whose attribute value ends with a specific value. */
+      a[href*="example"] {
+        color: orange;
+      }
+
+      /* 4. Pseudo-Class Selectors */
+      /* 4.1. :hover */
+      /* Selects an element when the user hovers over it. */
+      button:hover {
+        background-color: green;
+      }
+
+      /* 4.2. :focus */
+      /* Selects an element that is currently focused. */
+      input:focus {
+        outline: 2px solid blue;
+      }
+
+      /* 4.3. :nth-child() */
+      /* Selects elements based on their order in a parent. */
+      li:nth-child(2) {
+        color: purple;
+      }
+
+      /* 4.4. :nth-of-type() */
+      /* Selects elements of a specific type based on their order in a parent. */
+      p:nth-of-type(3) {
+        font-weight: bold;
+      }
+
+      /* 4.5. :first-child, :last-child */
+      /* Selects the first/last child of a parent. */
+      p:first-child {
+        margin-top: 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* 4.6. :not(selector) */
+      /* Selects elements that do not match the specified selector. */
+      div:not(.highlight) {
+        background-color: lightgray;
+      }
+
+      /* 4.7. :checked */
+      /* Selects checked inputs like checkboxes or radio buttons. */
+      input:checked {
+        border: 2px solid green;
+      }
+
+      /* 5. Pseudo-Element Selectors */
+      /* 5.1. ::before */
+      /* Inserts content before an element's actual content. */
+      h1::before {
+        content: "★ ";
+        color: gold;
+      }
+
+      /* 5.2. ::after */
+      /* Inserts content after an element's content. */
+      h1::after {
+        content: " ★";
+        color: gold;
+      }
+
+      /* 5.3. ::first-letter */
+      /* Styles the first letter of an element. */
+      p::first-letter {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      /* 5.4. ::first-line */
+      /* Styles the first line of an element. */
+      p::first-line {
+        text-transform: uppercase;
+      }
+
+      /* 6. Grouping Selectors */
+      /* 6.1. Group Selector (,) */
+      /* Apply the same styles to multiple elements. */
+      h1,
+      h2,
+      h3 {
+        color: navy;
+      }
+
+      /* 7. Advanced Selectors */
+      /* 7.1. :empty */
+      /* Selects elements with no children (including text nodes). */
+      div:empty {
+        display: none;
+      }
+
+      /* 7.2. :only-child */
+      /* Selects elements that are the only child of their parent. */
+      p:only-child {
+        color: red;
+      }
+
+      /* 7.3. :only-of-type */
+      /* Selects elements that are the only one of their type within a parent. */
+      span:only-of-type {
+        background-color: yellow;
+      }
+
+      /* 7.4. :nth-last-child() */
+      /* Selects elements based on their position, starting from the end. */
+      li:nth-last-child(1) {
+        font-style: italic;
+      }
+
+      /* 8. Complex Selectors */
+      /* 8.1. :nth-child(an+b) */
+      /* Selects elements according to a formula. */
+      li:nth-child(2n) {
+        background-color: lightblue;
+      }
+
+      /* 8.2. :nth-of-type(an+b) */
+      /* Selects elements of a particular type according to a formula. */
+      p:nth-of-type(3n + 1) {
+        color: green;
+      }
+
+      /* Practice and Use Cases */
+
+      /* Practice and Use Cases
+    Type Selectors: Great for resetting margins/paddings for global styles.
+    Class Selectors: Ideal for reusable components across your website.
+    ID Selectors: Best used for unique elements like headers or footers.
+    Pseudo-classes (:hover, :focus): Create interactive effects for buttons or links.
+    Attribute Selectors: Target form elements based on type or href values.
+
+    Conclusion
+    Mastering CSS selectors allows you to apply styles with precision.
+    With combinators, pseudo-classes, and advanced attribute selectors, 
+    you can control every aspect of your webpage’s presentation. 
+    Practice combining these selectors to target exactly what you need!
+    */
+    </style>
+  </head>
+  <body></body>
+</html>

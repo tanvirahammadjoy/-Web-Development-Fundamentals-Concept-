@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Class on HTML: Images & Multimedia</title>
+  </head>
+  <body>
+    <!-- Master Class on HTML: Images & Multimedia -->
+    1. Introduction to HTML Images & Multimedia
+    <!-- HTML allows you to embed images, videos, and audio to create more engaging and interactive web content. In this master class, we’ll cover: -->
+
+    <!-- How to use the <img> tag for images. -->
+    <!-- Multimedia elements like <audio>, <video>, and the <picture> element. -->
+    <!-- Best practices for accessibility, performance, and responsiveness. -->
+
+    <!-- 2. Images in HTML -->
+    <!-- 2.1 The <img> Tag -->
+    <!-- The <img> tag embeds images into your webpage. It is self-closing and requires at least two attributes: -->
+
+    <!-- src: The path to the image file. -->
+    <!-- alt: Alternative text for accessibility and SEO. -->
+    <!-- Example: -->
+    <img src="image.jpg" alt="A description of the image" />
+
+    <!-- 2.2 Image Formats -->
+    <!-- JPEG (JPG): Best for photos or images with many colors. Compressed and small in size. -->
+    <!-- PNG: Supports transparency, good for logos or images with fewer colors. -->
+    <!-- GIF: Supports animations but limited to 256 colors. -->
+    <!-- SVG: Scalable vector graphics, ideal for icons and graphics that scale without loss of quality. -->
+    <!-- WebP: New format that provides both lossy and lossless compression. -->
+
+    <!-- 2.3 Responsive Images -->
+    <!-- To ensure that images display correctly on different screen sizes, HTML5 introduces attributes and elements for responsive images: -->
+
+    <!-- srcset: Specifies different image files for different screen sizes. -->
+    <!-- sizes: Defines the image size depending on the viewport width. -->
+    <!-- Example: -->
+    <img
+      src="small.jpg"
+      srcset="medium.jpg 768w, large.jpg 1200w"
+      sizes="(max-width: 768px) 100vw, 50vw"
+      alt="Responsive image"
+    />
+
+    <!-- 2.4 The <picture> Element -->
+    <!-- This element allows you to specify different images based on conditions such as viewport width or device pixel ratio. -->
+
+    <!-- Example: -->
+    <picture>
+      <source srcset="image.webp" type="image/webp" />
+      <source srcset="image.png" type="image/png" />
+      <img src="fallback.jpg" alt="An image" />
+    </picture>
+
+    <!-- 3. Multimedia in HTML -->
+    <!-- 3.1 The <audio> Tag -->
+    <!-- The <audio> tag is used to embed sound files.
+        You can control playback using attributes like controls, autoplay, and loop. -->
+    <!-- Example: -->
+
+    <audio controls>
+      <source src="audio.mp3" type="audio/mpeg" />
+      <source src="audio.ogg" type="audio/ogg" />
+      Your browser does not support the audio element.
+    </audio>
+    <!-- controls: Adds play/pause controls for the user. -->
+    <!-- autoplay: Automatically starts playing when the page loads (use carefully). -->
+    <!-- loop: Repeats the audio indefinitely. -->
+
+    <!-- 3.2 The <video> Tag -->
+    <!-- The <video> tag embeds video content, with attributes for controls, autoplay, and more. -->
+
+    <!-- Example: -->
+    <video controls width="640" height="360">
+      <source src="video.mp4" type="video/mp4" />
+      <source src="video.webm" type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- poster: A placeholder image displayed before the video starts. -->
+    <!-- preload: Controls whether the video should be loaded before being played (e.g., none, metadata, auto). -->
+
+    <!-- 3.3 Embedding Videos from External Sources -->
+    <!-- You can embed videos from external platforms like YouTube or Vimeo using the <iframe> tag. -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+
+    <!-- 4. Best Practices for Images & Multimedia -->
+    <!-- 4.1 Accessibility -->
+    <!-- Always provide meaningful alt text for images to describe the content for screen readers and improve SEO. -->
+    <!-- For multimedia, ensure that there are captions or transcripts available for users who are deaf or hard of hearing. -->
+    <!-- 4.2 Performance -->
+    <!-- Optimize images: Compress images before uploading to improve page load times. -->
+    <!-- Use modern formats like WebP for better compression. -->
+    <!-- Lazy load images and videos to prevent unnecessary content from loading before it's needed. -->
+    <!-- Example of lazy loading: -->
+    <img src="image.jpg" alt="Lazy loading image" loading="lazy" />
+    <!-- 4.3 Responsive Design -->
+    <!-- Use the srcset and sizes attributes to serve different images based on device size and resolution. -->
+    <!-- Ensure multimedia content is responsive by setting relative widths. -->
+    <!-- Example for video: -->
+    <!-- video { max-width: 100%; height: auto; } -->
+
+    <!-- 4.4 File Size Considerations -->
+    <!-- Keep image files as small as possible without sacrificing quality. Tools like TinyPNG,
+     ImageOptim, and Squoosh can help compress files. -->
+    <!-- For videos, consider reducing the resolution or using streaming services for heavy content. -->
+
+    <!-- 5. Advanced Topics -->
+    <!-- 5.1 SVGs (Scalable Vector Graphics) -->
+    <!-- SVGs are XML-based graphics that can be embedded directly into HTML. They are resolution-independent and often used for logos and icons. -->
+
+    <!-- Example: -->
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="3"
+        fill="red"
+      />
+    </svg>
+    <!-- SVGs are scalable without quality loss. -->
+    <!-- You can manipulate SVG elements with CSS and JavaScript, making them interactive. -->
+
+    <!-- 5.2 Canvas for Custom Graphics -->
+    <!-- For more dynamic visuals, HTML5 provides the <canvas> element, which allows you to draw 2D shapes and images using JavaScript. -->
+
+    <!-- Example: -->
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, 150, 75);
+    </script>
+
+    <!-- 5.3 Embedding Third-Party Content -->
+    <!-- In addition to videos, you can embed other external multimedia content like maps or documents using <iframe>. -->
+
+    <!-- Example: -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen
+    ></iframe>
+
+    <!-- 6. Conclusion -->
+    <!-- Embedding images and multimedia is essential for modern web development,
+     but using these elements efficiently is crucial for performance and accessibility.
+     By following best practices, including responsive images, optimization,
+     and accessibility considerations, you can ensure your web pages remain fast,
+     user-friendly, and engaging.
+     -->
+  </body>
+</html>

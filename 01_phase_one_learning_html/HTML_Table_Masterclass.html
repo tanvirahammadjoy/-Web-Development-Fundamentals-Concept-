@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masterclass on HTML Tables</title>
+  </head>
+  <body>
+    <!-- Masterclass on HTML Tables Tables in HTML are used to display data in a
+    structured format. They're essential for organizing and presenting
+    information such as comparison charts, schedules, or statistical data. Let’s
+    break down how HTML tables work, their components, attributes, and some best
+    practices for styling them. -->
+    <!-- 1. Structure of HTML Tables
+    Tables in HTML are created using the <table> element. The table is divided into rows (<tr>),
+    and each row contains cells. There are two types of cells:
+
+    Header cells (<th>), which define the table headers.
+    Data cells (<td>), which contain the actual data.
+    Basic Table Example -->
+    <table>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+      </tr>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+      <tr>
+        <td>Data 4</td>
+        <td>Data 5</td>
+        <td>Data 6</td>
+      </tr>
+    </table>
+
+    <!-- 2. Main Table Elements
+    <table>: The container that holds all table elements.
+    <tr>: Table row that can contain header or data cells.
+    <th>: Table header cell, used for column headings.
+    <td>: Table data cell, used for data entries.
+    <caption>: Defines a caption or title for the table.
+    Example with Caption -->
+    <table>
+      <caption>
+        Monthly Sales Report
+      </caption>
+      <tr>
+        <th>Product</th>
+        <th>Sales</th>
+        <th>Revenue</th>
+      </tr>
+      <tr>
+        <td>Laptop</td>
+        <td>200</td>
+        <td>$100,000</td>
+      </tr>
+      <tr>
+        <td>Smartphone</td>
+        <td>500</td>
+        <td>$250,000</td>
+      </tr>
+    </table>
+    <!-- 
+    3. Grouping Table Content
+    <thead>: Groups header rows in the table.
+    <tbody>: Groups body rows in the table.
+    <tfoot>: Groups footer rows in the table.
+    Grouping content improves readability and accessibility, making it easier to manage large tables.
+
+    Example with Grouping -->
+    <table>
+      <caption>
+        Company Performance
+      </caption>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Revenue</th>
+          <th>Profit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2022</td>
+          <td>$2M</td>
+          <td>$500K</td>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>$3M</td>
+          <td>$1M</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td>$1.5M</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- 4. Spanning Rows and Columns Tables support spanning across multiple rows
+    and columns using colspan and rowspan attributes. Column Span (colspan) Used
+    to make a cell span multiple columns. Example: -->
+    <table>
+      <tr>
+        <th colspan="3">Product Information</th>
+      </tr>
+      <tr>
+        <td>Product</td>
+        <td>Price</td>
+        <td>Stock</td>
+      </tr>
+      <tr>
+        <td>Laptop</td>
+        <td>$1000</td>
+        <td>20</td>
+      </tr>
+    </table>
+
+    <!-- Row Span (rowspan) Used to make a cell span multiple rows. Example: -->
+    <table>
+      <tr>
+        <td rowspan="2">Laptop</td>
+        <td>Model</td>
+        <td>Price</td>
+      </tr>
+      <tr>
+        <td>Pro</td>
+        <td>$1500</td>
+      </tr>
+    </table>
+
+    <!-- 5. Table Accessibility
+    To make tables accessible:
+
+    Use <caption> to provide a description.
+    Associate header cells with data cells using scope attribute in <th>. scope="col" defines column headers, and scope="row" defines row headers.
+    Example with Accessibility:-->
+    <table>
+      <caption>
+        Student Grades
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Student</th>
+          <th scope="col">Math</th>
+          <th scope="col">Science</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Alice</th>
+          <td>A</td>
+          <td>B</td>
+        </tr>
+        <tr>
+          <th scope="row">Bob</th>
+          <td>B</td>
+          <td>A</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 6. Styling Tables with CSS Tables can be styled using CSS to improve their
+    appearance. Basic Styling Example: -->
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    </style>
+
+    <!-- Responsive Tables For mobile-friendly tables, use a div with overflow-x:
+    auto. -->
+    <style>
+      .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      }
+    </style>
+
+    <div class="table-responsive">
+      <table>
+        <!-- Table content goes here -->
+      </table>
+    </div>
+    <!-- 7. Best Practices
+    Use Semantic HTML: Use appropriate tags like <thead>, <tbody>, and <tfoot> to structure tables logically.
+    Avoid Excessive Nested Tables: Tables should be kept simple and avoid complex nesting for readability.
+    Keep Accessibility in Mind: Always include table captions and use the scope attribute for headers.
+    Optimize for Responsiveness: Ensure tables are readable on mobile devices by making them responsive with scrollable containers.
+    Use colspan and rowspan Wisely: These should be used only when necessary to avoid disrupting the flow of information. -->
+
+    <!-- 8. Advanced Features
+    Table Border Models: HTML tables can use two border models:
+
+    Separation Model: Default mode with separate borders for each cell.
+    Collapse Model: Borders of adjacent cells are collapsed into one.
+    Example of collapsed borders: -->
+    <!-- table { border-collapse: collapse; } -->
+
+    <!-- Conclusion -->
+    <!-- Mastering HTML tables involves understanding their structure, proper usage of elements like <thead>, <tbody>,
+    and <tfoot>, and learning to style them effectively for both desktop and mobile.
+    Adhering to accessibility guidelines is essential to create usable, readable tables for all users. -->
+  </body>
+</html>

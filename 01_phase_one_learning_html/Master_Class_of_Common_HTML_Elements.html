@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Class on Common HTML Elements</title>
+  </head>
+  <body>
+    <!-- Master Class on Common HTML Elements -->
+    <!-- Introduction -->
+    <!-- HTML (HyperText Markup Language) is the backbone of web content.
+     It structures a webpage and defines how elements like text, images, links,
+     and forms are presented. Understanding HTML's common elements is essential for building user-friendly websites.
+     Let's break down the most important and widely used HTML elements, their purpose, and how to use them effectively. -->
+
+    <!-- 1. Structural Elements -->
+    <!-- Structural elements define the layout and structure of the web page. -->
+    <!-- <html> -->
+    <!-- The root element that wraps the entire HTML document. -->
+
+    <!-- <html lang="en"> -->
+    <!-- Your content goes here -->
+    <!-- </html> -->
+
+    <!-- <head> -->
+    <!-- Contains metadata, links to stylesheets, and other non-visual elements like <title>, <meta>, and <link>. -->
+    <!-- <head> -->
+    <!-- <title>Page Title</title> -->
+    <!-- <meta charset="UTF-8" /> -->
+    <!-- </head> -->
+
+    <!-- <body> -->
+    <!-- Holds all the visible content on the webpage, like headings, paragraphs, and images. -->
+    <!-- <body> -->
+    <!-- <h1>Welcome to My Website</h1> -->
+    <!-- </body> -->
+
+    <!-- <header>, <footer>, <main>, <section>, <article>, <nav> -->
+    <!-- Semantic elements to define different sections of a webpage for better readability and SEO. -->
+    <!-- <header> Page header -->
+    <!-- <h1>Site Title</h1> -->
+    <!-- <nav> -->
+    <!-- <ul> -->
+    <!-- <li><a href="#">Home</a></li> -->
+    <!-- <li><a href="#">About</a></li> -->
+    <!-- </ul> -->
+    <!-- </nav> -->
+    <!-- </header> -->
+
+    <!-- <main> Main content -->
+    <!-- <section> -->
+    <!-- <article> -->
+    <!-- <h2>Article Title</h2> -->
+    <!-- <p>Some content.</p> -->
+    <!-- </article> -->
+    <!-- </section> -->
+    <!-- </main> -->
+
+    <!-- <footer> Footer section -->
+    <!-- <p>&copy; 2024 My Website</p> -->
+    <!-- </footer> -->
+
+    <!-- 2. Text Elements -->
+    <!-- Text elements format content and create structure. -->
+
+    <!-- <h1> to <h6> -->
+    <!-- Define headings from the most important (<h1>) to the least important (<h6>). -->
+    <h1>Main Heading</h1>
+    <h2>Sub Heading</h2>
+
+    <!-- <p> -->
+    <!-- Defines a paragraph. It’s block-level, so it takes up the full width available. -->
+    <p>This is a paragraph of text.</p>
+
+    <!-- <span> -->
+    <!-- Used for inline text formatting. -->
+    <span style="color: blue">This text is blue.</span>
+
+    <!-- <br> -->
+    <!-- Inserts a line break. -->
+    <p>First line<br />Second line</p>
+
+    <!-- <strong>, <em>, <b>, <i> -->
+    <!-- <strong> and <em> emphasize text semantically (for importance). -->
+    <!-- <b> and <i> create bold and italic text for styling purposes. -->
+    <p><strong>Important text</strong> and <em>emphasized text</em>.</p>
+    <p><b>Bold text</b> and <i>Italic text</i>.</p>
+
+    <!-- <blockquote> -->
+    <!-- Defines a block of text quoted from another source. Often indented. -->
+    <blockquote>"This is a blockquote."</blockquote>
+
+    <!-- 3. List Elements Lists group related content in a structured way. -->
+
+    <!-- <ul>, <ol>, <li> -->
+    <!-- <ul> creates an unordered list (bullet points). -->
+    <!-- <ol> creates an ordered list (numbered). -->
+    <!-- <li> defines list items. -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+
+    <ol>
+      <li>First</li>
+      <li>Second</li>
+    </ol>
+
+    <!-- <dl>, <dt>, <dd> -->
+    <!-- Defines a description list with terms (<dt>) and their definitions (<dd>). -->
+    <dl>
+      <dt>HTML</dt>
+      <dd>HyperText Markup Language</dd>
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <!-- 4. Media Elements -->
+    <!-- These elements add multimedia content like images, audio, and video. -->
+
+    <!-- <img> -->
+    <!-- Embeds an image. -->
+    <img
+      src="image.jpg"
+      alt="A descriptive alt text"
+      width="300"
+      height="200"
+    />
+
+    <!-- <video> -->
+    <!-- Embeds a video with playback controls. -->
+    <video controls>
+      <source src="movie.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- <audio> -->
+    <!-- Embeds audio content with playback controls. -->
+    <audio controls>
+      <source src="song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- <figure> and <figcaption> -->
+    <!-- <figure> wraps multimedia content with an optional <figcaption>. -->
+    <figure>
+      <img src="image.jpg" alt="Description" />
+      <figcaption>This is a caption for the image.</figcaption>
+    </figure>
+
+    <!-- 5. Link Elements -->
+    <!-- Links are essential for navigation within and across websites. -->
+
+    <!-- <a> -->
+    <!-- Defines a hyperlink. -->
+    <a href="https://www.example.com">Visit Example</a>
+
+    <!-- target="_blank" -->
+    <!-- Opens the link in a new tab. -->
+    <a rel="noopener" href="https://www.example.com" target="_blank"
+      >Open in New Tab</a
+    >
+
+    <!-- <link> -->
+    <!-- Adds external resources like stylesheets to the HTML document. -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 6. Form Elements -->
+    <!-- Forms collect user input and send data to a server. -->
+
+    <!-- <form> -->
+    <!-- The container for form elements. -->
+    <form action="/submit" method="POST">
+      <!-- Form elements go here -->
+    </form>
+
+    <!-- <input> -->
+    <!-- Creates input fields. -->
+    <input type="text" name="username" placeholder="Enter Username" />
+    <input type="password" name="password" placeholder="Enter Password" />
+
+    <!-- <textarea> -->
+    <!-- Creates a multi-line text input field. -->
+    <textarea name="message" rows="4" cols="50">
+Type your message here.</textarea
+    >
+
+    <!-- <button> -->
+    <!-- Creates a clickable button. -->
+    <button type="submit">Submit</button>
+
+    <!-- <select> and <option> -->
+    <!-- Creates a drop-down list. -->
+    <select name="country">
+      <option value="US">United States</option>
+      <option value="UK">United Kingdom</option>
+    </select>
+
+    <!-- 7. Table Elements -->
+    <!-- Tables organize data in a grid of rows and columns. -->
+
+    <!-- <table>, <tr>, <td>, <th>, <thead>, <tbody>, <tfoot> -->
+    <!-- These elements define the structure of tables. -->
+    <table>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Cell 1</td>
+          <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+          <td>Row 2, Cell 1</td>
+          <td>Row 2, Cell 2</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Footer Content</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- 8. Interactive Elements -->
+    <!-- These elements enhance user interaction and accessibility. -->
+
+    <!-- <details> and <summary> -->
+    <!-- Creates an expandable/collapsible widget. -->
+    <details>
+      <summary>More Info</summary>
+      <p>This is additional information revealed when you click "More Info".</p>
+    </details>
+
+    <!-- <progress> -->
+    <!-- Displays a progress bar. -->
+    <progress value="70" max="100"></progress>
+
+    <!-- <meter> -->
+    <!-- Displays a scalar measurement. -->
+    <meter value="0.6">60%</meter>
+
+    <!-- 9. Miscellaneous Elements -->
+    <!-- <div> -->
+    <!-- A generic block-level container for grouping elements. -->
+    <div class="container">
+      <p>Content inside a div.</p>
+    </div>
+
+    <!-- <span> -->
+    <!-- A generic inline container for grouping text or inline elements. -->
+    <span style="color: red">Inline content inside a span.</span>
+
+    <!-- Conclusion -->
+    <!-- This master class covered the essential HTML elements you will frequently encounter.
+     Mastering these elements enables you to structure web pages efficiently and handle different types of content like text,
+     images, links, and forms. As you grow more comfortable, you can combine these elements with CSS and JavaScript to build dynamic,
+     responsive, and visually appealing websites. -->
+
+    <!-- Happy coding! -->
+  </body>
+</html>
