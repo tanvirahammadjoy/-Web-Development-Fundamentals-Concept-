@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Binary Converter</h1>
+        <input type="text" id="inputNumber" placeholder="Enter number">
+        <div>
+            <button onclick="convertToBinary()">Decimal to Binary</button>
+            <button onclick="convertToDecimal()">Binary to Decimal</button>
+        </div>
+        <div class="result" id="result"></div>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+
+    <script src="converter.js"></script>
+</body>
+</html>

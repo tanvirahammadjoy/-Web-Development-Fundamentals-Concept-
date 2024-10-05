@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphical Binary Representation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+        .binary-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .bit-block {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 20px;
+            line-height: 40px;
+            color: white;
+            text-align: center;
+        }
+        .block-1 {
+            background-color: blue;
+        }
+        .block-0 {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <label for="decimalInput">Enter a Decimal Number:</label>
+        <input type="number" id="decimalInput" placeholder="Enter number">
+        <button onclick="convertToBinary()">Convert to Binary</button>
+    </div>
+    
+    <h2>Binary Representation:</h2>
+    <div id="binaryOutput" class="binary-container">
+        <!-- Blocks will be displayed here -->
+    </div>
+    <h2>Binary Representation:</h2>
+    <div id="binaryOutput" class="binary-container">
+        <!-- Blocks will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

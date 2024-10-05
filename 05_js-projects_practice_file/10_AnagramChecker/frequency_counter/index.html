@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anagram Checker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      .result {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Let's add a simple user interface (UI) for the anagram checker so that users can input two strings and see if they are anagrams.
+
+    Steps to Create the UI:
+    HTML: Create two input fields for users to type in two strings and a button to check if the strings are anagrams.
+    JavaScript: We'll connect the button to the areAnagrams() function and display the result (either "They are anagrams" or "They are not anagrams") on the page.
+    Here's the complete setup:
+
+    HTML + CSS + JavaScript for Anagram Checker: -->
+    <div class="container">
+      <h1>Anagram Checker</h1>
+      <input type="text" id="string1" placeholder="Enter first string" />
+      <input type="text" id="string2" placeholder="Enter second string" />
+      <button onclick="checkAnagram()">Check if Anagram</button>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      // Function to check if two strings are anagrams
+      function areAnagrams(str1, str2) {
+        let cleanedStr1 = str1.replace(/\s+/g, "").toLowerCase();
+        let cleanedStr2 = str2.replace(/\s+/g, "").toLowerCase();
+
+        if (cleanedStr1.length !== cleanedStr2.length) {
+          return false;
+        }
+
+        let frequencyCounter1 = {};
+        let frequencyCounter2 = {};
+
+        for (let char of cleanedStr1) {
+          frequencyCounter1[char] = (frequencyCounter1[char] || 0) + 1;
+        }
+
+        for (let char of cleanedStr2) {
+          frequencyCounter2[char] = (frequencyCounter2[char] || 0) + 1;
+        }
+
+        for (let char in frequencyCounter1) {
+          if (frequencyCounter1[char] !== frequencyCounter2[char]) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      // Function to handle the button click event and display the result
+      function checkAnagram() {
+        let string1 = document.getElementById("string1").value;
+        let string2 = document.getElementById("string2").value;
+        let resultDiv = document.getElementById("result");
+
+        if ((string1 === "", string2 === "")) {
+          resultDiv.textContent = "Please enter both string!!!";
+          resultDiv.style.color = "orange";
+          return;
+        }
+
+        if (areAnagrams(string1, string2)) {
+          resultDiv.textContent = "✅ They are anagrams!";
+          resultDiv.style.color = "green";
+        } else {
+          resultDiv.textContent = "❌ They are not anagrams!";
+          resultDiv.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+Explanation of the UI:
+HTML:
+
+Two input fields (#string1 and #string2) for the user to input two strings.
+A button that triggers the checkAnagram() function to check if the input strings are anagrams.
+A div element (#result) where the result (whether they are anagrams or not) is displayed.
+CSS:
+
+Basic styling to make the page look clean and centered. The button changes color when hovered, and the result message is styled with different colors depending on whether the strings are anagrams or not.
+JavaScript:
+
+The checkAnagram() function retrieves the input values, checks if they are anagrams using the areAnagrams() function, and updates the #result div with either a green "They are anagrams" message or a red "They are not anagrams" message.
+Try It Out:
+When you type two strings in the input boxes and click "Check if Anagram", the result is shown below the button.
+-->
