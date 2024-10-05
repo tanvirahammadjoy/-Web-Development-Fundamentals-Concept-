@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-text-size-adjust",
+          "mask-border",
+          "-webkit-mask-box-image",
+          "mask-image"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "axe/forms": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "video[controlslist]"
+        ]
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "frame-title": "off"
+      }
+    ]
+  }
+}
