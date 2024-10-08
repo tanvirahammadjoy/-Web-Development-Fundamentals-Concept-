@@ -1,0 +1,30 @@
+<!-- The main HTML file (index.html) will not have the full content for all the pages. Instead, it will have an empty main tag where the content will be dynamically inserted. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="homeLink">Home</a></li>
+                <li><a href="#" id="aboutLink">About</a></li>
+                <li><a href="#" id="contactLink">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="content">
+        <!-- This is where the dynamic content will be rendered -->
+    </main>
+
+    <footer><p>copy right</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- In this file, you only have a navigation bar and an empty main section (<main id="content">). When a user clicks on one of the navigation links, JavaScript will dynamically load the content from the appropriate file (like about.html or contact.html) and insert it into the main section. -->

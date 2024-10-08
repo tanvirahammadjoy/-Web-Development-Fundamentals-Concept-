@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA Navigation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#team">team</a>
+  </nav>
+
+  <div id="home" class="tab">Welcome to the Home Page</div>
+  <div id="about" class="tab">About Us</div>
+  <div id="contact" class="tab">Contact Information</div>
+  <div id="team" class="tab">
+    <h1>hello  world</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, unde? Maiores beatae atque enim laboriosam totam modi ipsum ipsam nobis.</p>
+    <div class="div-team">ok</div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function handleHashChange() {
+      const hash = window.location.hash.slice(1); // Remove the '#' from the hash
+      if (hash) {
+        showTab(hash);
+      } else {
+        showTab('home'); // Default tab
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('DOMContentLoaded', handleHashChange); // Load the correct tab on page load
+  </script>
+</body>
+</html>
